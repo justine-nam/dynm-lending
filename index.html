@@ -63,6 +63,41 @@
             </div>
         </section>
 
+        <section id="calculator" class="calculator">
+            <h2>Loan Calculator</h2>
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="loanAmount">Loan Amount ($)</label>
+                        <input type="number" id="loanAmount" min="1000" max="500000" value="10000">
+                    </div>
+                    <div class="form-group">
+                        <label for="loanTerm">Loan Term (Months)</label>
+                        <input type="number" id="loanTerm" min="3" max="60" value="12">
+                    </div>
+                    <div class="form-group">
+                        <label for="interestRate">Interest Rate (%)</label>
+                        <input type="number" id="interestRate" min="3.9" max="9.9" step="0.1" value="5.9">
+                    </div>
+                    <button id="calculateBtn" class="calculate-btn">Calculate</button>
+                </div>
+                <div class="calculator-result">
+                    <div class="result-item">
+                        <h3>Monthly Payment</h3>
+                        <p id="monthlyPayment">$0.00</p>
+                    </div>
+                    <div class="result-item">
+                        <h3>Total Interest</h3>
+                        <p id="totalInterest">$0.00</p>
+                    </div>
+                    <div class="result-item">
+                        <h3>Total Payment</h3>
+                        <p id="totalPayment">$0.00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="process" class="process">
             <h2>Loan Process</h2>
             <div class="process-steps">
@@ -145,5 +180,40 @@
             <p>&copy; 2024 DYNM Lending. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        document.getElementById('calculateBtn').addEventListener('click', calculateLoan);
+
+        function calculateLoan() {
+            // Get input values
+            const loanAmount = parseFloat(document.getElementById('loanAmount').value);
+            const loanTerm = parseInt(document.getElementById('loanTerm').value);
+            const interestRate = parseFloat(document.getElementById('interestRate').value);
+
+            // Calculate monthly interest rate
+            const monthlyRate = interestRate / 100 / 12;
+
+            // Calculate monthly payment using the formula: P = L[c(1 + c)^n]/[(1 + c)^n - 1]
+            const monthlyPayment = loanAmount * monthlyRate * Math.pow(1 + monthlyRate, loanTerm) / (Math.pow(1 + monthlyRate, loanTerm) - 1);
+
+            // Calculate total payment and interest
+            const totalPayment = monthlyPayment * loanTerm;
+            const totalInterest = totalPayment - loanAmount;
+
+            // Update results
+            document.getElementById('monthlyPayment').textContent = formatCurrency(monthlyPayment);
+            document.getElementById('totalInterest').textContent = formatCurrency(totalInterest);
+            document.getElementById('totalPayment').textContent = formatCurrency(totalPayment);
+
+            // Add animation class to results
+            document.querySelectorAll('.result-item').forEach(item => {
+                item.classList.add('animate');
+                setTimeout(() => item.classList.remove('animate'), 1000);
+            });
+        }
+
+        function formatCurrency(amount) {
+            return '$' + amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+        }
+    </script>
 </body>
 </html> 
