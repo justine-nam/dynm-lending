@@ -3,152 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DYNM Lending - Your Financial Partner</title>
+    <meta name="description" content="DYNM Lending - Your trusted financial partner in the Philippines. Offering personal loans, business loans, and professional growth financing with competitive rates starting at 1%.">
+    <meta name="keywords" content="DYNM Lending, personal loans, business loans, financial services, Philippines, Cebu, loan calculator, low interest rates">
+    <meta name="author" content="DYNM Lending">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="DYNM Lending - Your Financial Partner">
+    <meta property="og:description" content="Get the financial support you need with DYNM Lending. Competitive rates starting at 1% for personal and business loans.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dynm-lending.vercel.app">
+    <meta property="og:image" content="https://dynm-lending.vercel.app/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://dynm-lending.vercel.app">
+    <title>DYNM Lending - Your Financial Partner in the Philippines</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FinancialService",
+        "name": "DYNM Lending",
+        "description": "A trusted financial partner offering personal and business loans in the Philippines.",
+        "url": "https://dynm-lending.vercel.app",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "#706 Golden Peak Hotel Gorordo Avenue, corner N Escario St.",
+            "addressLocality": "Cebu City",
+            "addressRegion": "Cebu",
+            "postalCode": "6000",
+            "addressCountry": "PH"
+        },
+        "telephone": "+639173100808",
+        "email": "dynmlending.hr@gmail.com",
+        "openingHours": "Mo-Fr 09:00-17:00",
+        "priceRange": "$$",
+        "areaServed": "Philippines",
+        "sameAs": [
+            "https://www.facebook.com/dynmlendinginv"
+        ]
+    }
+    </script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">DYNM Lending</div>
+    <header role="banner">
+        <nav role="navigation" aria-label="Main navigation">
+            <div class="logo" aria-label="DYNM Lending Logo">DYNM Lending</div>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#process">Process</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" aria-label="About section">About</a></li>
+                <li><a href="#services" aria-label="Services section">Services</a></li>
+                <li><a href="#process" aria-label="Process section">Process</a></li>
+                <li><a href="#contact" aria-label="Contact section">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
+    <main role="main">
+        <section class="hero" aria-label="Hero section">
             <div class="hero-content">
                 <h1>Your Dreams, Our Commitment</h1>
                 <p>Turning your financial aspirations into reality with personalized solutions and unwavering support</p>
-                <a href="#contact" class="cta-button">Start Your Journey</a>
+                <a href="#contact" class="cta-button" aria-label="Start your journey">Start Your Journey</a>
             </div>
         </section>
 
-        <section id="about" class="about">
+        <section id="about" class="about" aria-label="About section">
             <h2>About DYNM Lending</h2>
             <div class="about-content">
                 <div class="about-text">
                     <p>At DYNM Lending, we believe in more than just loans – we believe in your potential. Our mission is to empower your dreams with financial solutions that understand your unique journey.</p>
                     <ul>
-                        <li> Tailored Rates That Respect Your Goals</li>
-                        <li> Instant Support When You Need It Most</li>
-                        <li> Solutions Crafted Just For You</li>
-                        <li> A Team That Truly Cares</li>
+                        <li>Tailored Rates That Respect Your Goals</li>
+                        <li>Instant Support When You Need It Most</li>
+                        <li>Solutions Crafted Just For You</li>
+                        <li>A Team That Truly Cares</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section id="services" class="services">
+        <section id="services" class="services" aria-label="Services section">
             <h2>Our Services</h2>
             <div class="service-cards">
-                <div class="card">
+                <article class="card">
                     <h3>Personal Dreams</h3>
                     <p>Up to $50,000<br>Rates starting at 3.9% APR</p>
-                </div>
-                <div class="card">
+                </article>
+                <article class="card">
                     <h3>Professional Growth</h3>
                     <p>Up to $200,000<br>Rates starting at 4.9% APR</p>
-                </div>
-                <div class="card">
+                </article>
+                <article class="card">
                     <h3>Business Success</h3>
                     <p>Up to $500,000<br>Rates starting at 5.9% APR</p>
-                </div>
+                </article>
             </div>
         </section>
 
-        <section id="calculator" class="calculator">
+        <section id="calculator" class="calculator" aria-label="Loan calculator section">
             <h2>Loan Calculator</h2>
             <div class="calculator-container">
-                <div class="calculator-form">
+                <form class="calculator-form" role="form" aria-label="Loan calculator form">
                     <div class="form-group">
                         <label for="loanAmount">Loan Amount ($)</label>
-                        <input type="number" id="loanAmount" min="1000" max="500000" value="100000">
+                        <input type="number" id="loanAmount" min="1000" max="500000" value="100000" aria-label="Enter loan amount">
                     </div>
                     <div class="form-group">
                         <label for="loanTerm">Loan Term (Months)</label>
-                        <input type="number" id="loanTerm" min="3" max="60" value="12">
+                        <input type="number" id="loanTerm" min="3" max="60" value="12" aria-label="Enter loan term">
                     </div>
                     <div class="form-group">
                         <label for="interestRate">Interest Rate (%)</label>
-                        <input type="number" id="interestRate" min="1" max="9.9" step="0.1" value="1.5">
+                        <input type="number" id="interestRate" min="1" max="9.9" step="0.1" value="1.5" aria-label="Enter interest rate">
                     </div>
-                    <button id="calculateBtn" class="calculate-btn">Calculate</button>
-                </div>
-                <div class="calculator-result">
+                    <button id="calculateBtn" class="calculate-btn" type="button" aria-label="Calculate loan">Calculate</button>
+                </form>
+                <div class="calculator-result" role="region" aria-label="Calculation results">
                     <div class="result-item">
                         <h3>Monthly Payment</h3>
-                        <p id="monthlyPayment">$0.00</p>
+                        <p id="monthlyPayment" aria-live="polite">$0.00</p>
                     </div>
                     <div class="result-item">
                         <h3>Total Interest</h3>
-                        <p id="totalInterest">$0.00</p>
+                        <p id="totalInterest" aria-live="polite">$0.00</p>
                     </div>
                     <div class="result-item">
                         <h3>Total Payment</h3>
-                        <p id="totalPayment">$0.00</p>
+                        <p id="totalPayment" aria-live="polite">$0.00</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="process" class="process">
+        <section id="process" class="process" aria-label="Loan process section">
             <h2>Loan Process</h2>
             <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
+                <article class="step">
+                    <div class="step-number" aria-hidden="true">1</div>
                     <h3>Your Story</h3>
                     <p>Share your vision with us</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
+                </article>
+                <article class="step">
+                    <div class="step-number" aria-hidden="true">2</div>
                     <h3>Our Promise</h3>
                     <p>Simple, straightforward process</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
+                </article>
+                <article class="step">
+                    <div class="step-number" aria-hidden="true">3</div>
                     <h3>Your Success</h3>
                     <p>Swift, thoughtful approval</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
+                </article>
+                <article class="step">
+                    <div class="step-number" aria-hidden="true">4</div>
                     <h3>Our Support</h3>
                     <p>Immediate access to your funds</p>
-                </div>
+                </article>
             </div>
         </section>
 
-        <section id="contact" class="contact">
+        <section id="contact" class="contact" aria-label="Contact section">
             <h2>Contact Us</h2>
             <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
+                <article class="contact-item">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
                     <h3>Let's Talk</h3>
                     <p>0917-310-0808<br>0917-631-8080</p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
+                </article>
+                <article class="contact-item">
+                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                     <h3>Visit Us</h3>
                     <p>#706 Golden Peak Hotel <br>Gorordo Avenue, corner N Escario St. <br>Cebu City, Philippines 6000</p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
+                </article>
+                <article class="contact-item">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
                     <h3>Write to Us</h3>
                     <p>dynmlending.hr@gmail.com</p>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-facebook"></i>
+                </article>
+                <article class="contact-item">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
                     <h3>Connect With Us</h3>
-                    <a href="https://www.facebook.com/dynmlendinginv" target="_blank">Join Our Community</a>
-                </div>
+                    <a href="https://www.facebook.com/dynmlendinginv" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">Join Our Community</a>
+                </article>
             </div>
-            <div class="map-container">
+            <div class="map-container" aria-label="Location map">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.333123456789!2d123.8975!3d10.3167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a999c2f8c3f3f3%3A0x1234567890abcdef!2sGolden%20Peak%20Hotel%20%26%20Suites!5e0!3m2!1sen!2sph!4v1234567890!5m2!1sen!2sph"
                     width="100%" 
@@ -156,13 +192,14 @@
                     style="border:0;" 
                     allowfullscreen="" 
                     loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="DYNM Lending Location Map">
                 </iframe>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="footer-content">
             <div class="footer-info">
                 <h3>DYNM Lending</h3>
@@ -170,11 +207,11 @@
                 <p>Ready to Start? Call us at:<br>0917-310-0808 / 0917-631-8080</p>
                 <p>Let's Connect:<br>dynmlending.hr@gmail.com</p>
             </div>
-            <div class="footer-links">
+            <nav class="footer-links" aria-label="Footer navigation">
                 <a href="#">Our Commitment to You</a>
                 <a href="#">Your Privacy Matters</a>
                 <a href="#">Our Story</a>
-            </div>
+            </nav>
         </div>
         <div class="copyright">
             <p>&copy; 2024 DYNM Lending. All rights reserved.</p>
